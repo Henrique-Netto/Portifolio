@@ -1,18 +1,35 @@
 $(function(){
+    $('.card').hover(function(){ 
+        var newWidth = 70;
+        var newHeight = 70;
 
-    $('.card').hover(function(){ //função para ao passar o mouse crescer o icone
-        $(this).animate({
-            "width": 70,
-            "height":70,
+        if ($(window).width() <= 768) {
+            // Se a largura da tela for menor ou igual a 768px, ajuste as dimensões dos ícones
+            newWidth = 50;
+            newHeight = 50;
+        }
+
+        $(this).stop().animate({
+            "width": newWidth,
+            "height": newHeight,
             "margin-top": -20
         }, 200);
     }, function(){
-        $(this).animate({ //função para ao tirar o mouse voltar ao pradao o icone
-            "width": 60,
-            "height":60,
-            "margin-top": -0,
+        var defaultWidth = 60;
+        var defaultHeight = 60;
+
+        if ($(window).width() <= 768) {
+            // Se a largura da tela for menor ou igual a 768px, ajuste as dimensões dos ícones
+            defaultWidth = 40;
+            defaultHeight = 40;
+        }
+
+        $(this).stop().animate({
+            "width": defaultWidth,
+            "height": defaultHeight,
+            "margin-top": 0,
             "padding": 0,
-            "border-radius": 8,
+            "border-radius": 8
         }, 200);
     });
 });
