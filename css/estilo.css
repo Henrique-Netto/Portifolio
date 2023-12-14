@@ -57,8 +57,10 @@ header h1,a {
 }
 
 header a:hover, h1:hover{
-    color: #f87219;
+    /*color: #f87219;*/
+    color: #dbd6d3;
 }
+
 
 /* Rodapé */
 
@@ -107,23 +109,29 @@ main .main-content .text p{
     line-height: 1.6;
 }
 
+main .main-content .card {
+    width: 90%;
+
+}
+
 /* Cards - parte dos icones das tecnologias */
 
 main .techs .cards-container{
     display: flex;
     align-items: center;
+
 }
 
 main .techs .cards-container .card{
-    width: 100px;
-    height: 100px;
-    padding: 10px;
+    width: 60px;
+    height: 60px;
+    padding: 5px;
     background-color: #eee;
     border-radius: 8px;
-    margin-right: 0.9em;
-    margin-left: 0.9em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
     cursor: pointer;
-    border: 2px #f87219 solid;
+    border: 2px #dbd6d3 solid;
 
     display: flex;
     align-items: center;
@@ -137,9 +145,10 @@ main .techs .cards-container .card img{
 }
 
 main .techs .cards-container .card:hover{
-    box-shadow: 0px 0px 12px #f87219;;
+    box-shadow: 0px 0px 12px #dbd6d3;
 
 }
+
 
 /* parte da foto de perfil  */
 
@@ -162,12 +171,12 @@ main figure img{
     cursor: pointer;
 
     margin-bottom: 6%;
-    border: 2px #f87219 solid;
+    border: 2px #dbd6d3 solid;
     transition: 0.2 ease-in-out;
 
 }
 main figure img:hover{
-    box-shadow: 0px 0px 9px #f87219;;
+    box-shadow: 0px 0px 9px #dbd6d3;
 }
 
 /* responsividade */
