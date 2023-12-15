@@ -1,325 +1,162 @@
-/* Resetando os elementos*/
+/*resetes basicos*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
+    background-color: #eee;
     width: 100%;
     height: 100vh;
 
-    background-color: #333;
-    color: #fff;
-
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
 }
 
-a{
-    text-decoration: none;
-    color: #fff;
+/* Adicionado media query para dispositivos móveis */
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 10px; /* Ajuste o espaçamento conforme necessário para dispositivos móveis */
+    }
+
+    main {
+        width: 80%; /* Ajuste a largura conforme necessário para dispositivos móveis */
+    }
+
+    .inputs-container {
+        flex-direction: column; /* Empilhe os elementos em dispositivos móveis */
+    }
+
+    form input {
+        width: 100%; /* Faça o botão ocupar a largura total */
+    }
+
+    form select {
+        width: 100%; /* Faça o botão ocupar a largura total */
+    }
+
+    form button {
+        width: 100%; /* Faça o botão ocupar a largura total */
+    }
+
+    main #result span {
+        margin-right: 10px; /* Ajuste as margens conforme necessário para dispositivos móveis */
+        margin-left: 10px;
+    }
+}
+
+input, select, button{
+    border: 0;
+    outline: 0;
+    border-radius: 6px;
+    width: 220px;
+    padding: 10px 14px;
+    font-size: 1em;
+    box-shadow: 0px 0px 2px  rgba(0, 0, 0, 0.4);
+
     transition: 0.2s ease-in-out;
 }
 
-/* Cabecalho*/
+input:focus, select:focus{
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
 
+/*header*/
 header{
-    background-color: #222;
-    padding: 25px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /*joga cada item para um canto da tela*/
+    width: 100%;
+    background-color: #5aba8d;
+    padding: 20px;
 }
 
 header h1{
-    font-size: 2.6em;
-    font-weight: 800;
+    color: #fff;
+    font-size: 3em;
+    text-align: center;
     cursor: pointer;
 }
 
-header nav {
-    display: flex;
-    align-items: center;
-}
-
-header nav a {
-    margin-right: 1.3em;
-    font-size: 1.8em;
-}
-
-header h1,a {
-    color: #fff;
-    transition: 0.2s ease-in-out;
-}
-
-header a:hover, h1:hover{
-    /*color: #f87219;*/
-    color: #dbd6d3;
-}
-
-/*Navbar do menu*/
-
-#navCor{
-    background-color: #222;
-}
-
-.navbar-brand{
-    color: #fff;
-    font-weight: bold;
-    font-size: 2.0em;
-}
-
-#navCor a:hover, h1:hover{
-    /*color: #f87219;*/
-    color: #dbd6d3;
-}
-
-#navbarDropdownMenu{
-    background-color: #222;
-    border: 0;
-}
-#navbarDropdownMenuItens{
-    font-size: 0.9em;
-    color: #fff;
-    background-color: #222;
-    
-}
-
-#navbarDropdownMenu a:hover, h1:hover{
-    color: #dbd6d3;
-}
-
-/*Icones do final do menu navbar */
-
-#iconesMenu {
-    font-size: 1.9em;
-    margin-right: 10px;
-    padding: 10px;
-}
-
-
-
-/* Rodapé */
-
+/*footer*/
 footer{
-    background-color: #222;
-    padding: 16px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    background-color: #5aba8d;
+    padding: 10px;
+    text-align: center;
 }
 
 footer span{
-    font-size: 0.9em;
-    font-weight: 300;
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: 500;
 }
 
-/* conteudo principal - Sobre min */
-
+/*conteudo principal*/
 main{
-    padding: 5%;
+    width: 60%;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-main .main-content{
+form{
+    width: 100%;
+    margin-bottom: 12%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form #texto{
+    font-size: 1.6em;
+    color: #2f9766;
+}
+
+.inputs-container{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 8%;
+}
+
+.form-group{
     display: flex;
     flex-direction: column;
 }
 
-main .main-content h2{
-    margin-bottom: 2%;
-    font-size: 2.2em;
+.form-group label{
+    color: #333;
+    font-size: 0.8em;
+    font-weight: 600;
+    margin-bottom: 6px;
 }
 
-main .main-content .text{
-    margin-bottom: 10%;
-}
-
-main .main-content .text p{
-    width: 75%;
+form button{
+    background-color: #5aba8d;
+    color: #fff;
     font-size: 1.2em;
-    font-weight: 300;
-    line-height: 1.6;
-}
-
-main .main-content .card {
-    width: 90%;
-
-}
-
-/* Cards - parte dos icones das tecnologias */
-
-main .techs .cards-container{
-    display: flex;
-    align-items: center;
-
-}
-
-main .techs .cards-container .card{
-    width: 60px;
-    height: 60px;
-    padding: 0px;
-    background-color: #eee;
-    border-radius: 8px;
-    margin-right: 0.4em;
-    margin-left: 0.4em;
+    font-weight: 700;
     cursor: pointer;
-    border: 2px #dbd6d3 solid;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: box-shadow 0.25s ease-in-out;
 }
 
-main .techs .cards-container .card img{
-    width: 90%;
+form button:hover {
+    background-color: #fff;
+    color: #5aba8d;
 }
 
-main .techs .cards-container .card:hover{
-    box-shadow: 0px 0px 12px #dbd6d3;
-
+main #result{
+    font-size: 3.5em;
+    color: #2f9766;
 }
 
-
-/* parte da foto de perfil  */
-
-main figure{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-main figure figcaption{
-    font-size: 1.7em;
-    font-weight: 800;
-}
-
-main figure img{
-    width: 400px;
-    height: 400px;
-    border-radius: 200px;
-    cursor: pointer;
-
-    margin-bottom: 6%;
-    border: 2px #dbd6d3 solid;
-    transition: 0.2 ease-in-out;
-
-}
-main figure img:hover{
-    box-shadow: 0px 0px 9px #dbd6d3;
-}
-
-/* responsividade */
-
-@media (max-width: 1200px){
-    main{
-        width: 100%;
-
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .main-content{
-        width: 100%;
-        align-items: center;
-
-        margin-bottom: 15%;
-    }
-
-    main .main-content .text, .techs{
-        text-align: center;
-    }
-
-    main .main-content .text p{
-        width: 100%;
-        font-size: 0.9em;
-    }
-
-    main .techs .cards-container, .main-content .text p{
-     margin-top: 32px;   
-    }
-}
-
-
-
-@media (max-width: 700px){
-    header{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        
-        text-align: center;
-    }
-    header h1{
-        font-size: 2em;
-    }
-
-    header nav{
-        margin-top:24px;
-    }
-
-    header nav a{
-        font-size: 1em;
-    }
-
-    main .techs .cards-container .card{
-        width: 40px;
-        height: 40px;
-    }
-
-    main .main-content .text h2, .main-content .techs h2{
-        font-size: 1.8em;
-    }
-
-    main figure img {
-        width: 250px;
-        height: 250px;
-    }
-}
-
-@media (max-width: 320px){
-    header{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        
-        text-align: center;
-    }
-    header h1{
-        font-size: 2em;
-    }
-
-    header nav{
-        margin-top:24px;
-    }
-
-    header nav a{
-        font-size: 1em;
-    }
-
-    main .techs .cards-container .card{
-        width: 30px;
-        height: 30px;
-    }
-
-    main .main-content .text h2, .main-content .techs h2{
-        font-size: 1.8em;
-    }
-
-    main figure img {
-        width: 250px;
-        height: 250px;
-    }
+main #result span{
+    font-size: 0.6em;
+    margin-right: 50px;
+    margin-left: 50px;
 }
