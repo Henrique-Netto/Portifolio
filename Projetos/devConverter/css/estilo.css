@@ -17,6 +17,38 @@ body{
     justify-content: space-between;
 }
 
+/* Adicionado media query para dispositivos móveis */
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 10px; /* Ajuste o espaçamento conforme necessário para dispositivos móveis */
+    }
+
+    main {
+        width: 80%; /* Ajuste a largura conforme necessário para dispositivos móveis */
+    }
+
+    .inputs-container {
+        flex-direction: column; /* Empilhe os elementos em dispositivos móveis */
+    }
+
+    form input {
+        width: 100%; /* Faça o botão ocupar a largura total */
+    }
+
+    form select {
+        width: 100%; /* Faça o botão ocupar a largura total */
+    }
+
+    form button {
+        width: 100%; /* Faça o botão ocupar a largura total */
+    }
+
+    main #result span {
+        margin-right: 10px; /* Ajuste as margens conforme necessário para dispositivos móveis */
+        margin-left: 10px;
+    }
+}
+
 input, select, button{
     border: 0;
     outline: 0;
