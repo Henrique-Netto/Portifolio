@@ -18,7 +18,7 @@
 
 body{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     
     
     display: flex;
@@ -43,6 +43,7 @@ header h1 a{
 
 /*footer*/
 footer{
+    padding: 200px;
     width: 100%;
     padding: 1.5rem;
     text-align: center;
@@ -74,7 +75,7 @@ footer p{
 
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 70%;
     padding: 2rem;
     margin-top: 3rem;
     border-radius: 0.5rem;
@@ -123,8 +124,9 @@ footer p{
 }
 
 .container .result-box{
-    margin-top: 5%;
-    width: 40%;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    width: 70%;
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 1px 1px 5px 0px rgba(0, 0 , 0, 0.2);
@@ -148,6 +150,7 @@ footer p{
     color: var(--white);
     padding: 1rem;
     margin-top: 3%;
+    margin-bottom: 10px;
     font-size: 1.3rem;
     border: 0;
     outline: 0;
