@@ -90,6 +90,7 @@ footer p:hover{
 
 .main-header{
     display: flex;
+    padding: 10px;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 2em;
@@ -166,8 +167,8 @@ table tbody td{
 
 .modal-container{
     width: 100%;
-    max-width: 40vw;
-    height: 45vh;
+    max-width: 80vw;
+    height: 65vh;
     background-color: #fff;
     border-radius: 1.2em;
     padding: 2em;
