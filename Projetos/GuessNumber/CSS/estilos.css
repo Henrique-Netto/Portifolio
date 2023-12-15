@@ -75,7 +75,7 @@ footer p{
 
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 80%;
     padding: 2rem;
     margin-top: 3rem;
     border-radius: 0.5rem;
@@ -126,7 +126,7 @@ footer p{
 .container .result-box{
     margin-top: 50px;
     margin-bottom: 10px;
-    width: 70%;
+    width: 80%;
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 1px 1px 5px 0px rgba(0, 0 , 0, 0.2);
