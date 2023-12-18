@@ -1,7 +1,10 @@
 function addBola(){
     if (jogoAtivo) {
-        var x = Math.floor(Math.random()*500); // gera numero aleatorio de 0 a 800
-        var y = Math.floor(Math.random()*500);
+        var larguraCampoBola = $('.campoBola').width();
+        var alturaCampoBola = $('.campoBola').height();
+
+        var x = Math.floor(Math.random() * (larguraCampoBola - 50)); // 50 é a largura da bola
+        var y = Math.floor(Math.random() * (alturaCampoBola - 50)); // 50 é a altura da bola
         var cor = Math.floor(Math.random()*4);  // Criar bolas coloridas, azul, vermelho, amarelo, preto, verde
     
         var bola = $('<div class="bola"></div>');
