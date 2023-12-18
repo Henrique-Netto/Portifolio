@@ -1,0 +1,165 @@
+/*resetes basicos*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh; /* Garante que o corpo ocupa pelo menos toda a altura da viewport */
+}
+
+input, select, button{
+    border: 0;
+    outline: 0;
+    border-radius: 6px;
+    width: 220px;
+    padding: 10px 14px;
+    font-size: 1em;
+    box-shadow: 0px 0px 2px  rgba(0, 0, 0, 0.4);
+
+    transition: 0.2s ease-in-out;
+}
+
+input:focus, select:focus{
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/*header*/
+header{
+    width: 100%;
+    background-color: #5aba8d;
+    padding: 10px;
+}
+
+header h1{
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/*footer*/
+footer {
+    width: 100%;
+    background-color: #5aba8d;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto; /* Adicione esta linha para empurrar o footer para o fundo */
+}
+
+footer span{
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+
+.classTopo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.placar {
+    width: 200px;
+    height: 40px;
+    left: 0;
+    top: 0;
+    background-color: red;
+    margin-bottom: 10px; /* Ajuste a margem conforme necessário */
+}
+
+
+.btnComecar {
+    margin-top: -40px;
+    display: flex;
+    text-align: center;
+}
+
+#comecar {
+    padding: 8px 16px; /* Ajuste o padding conforme necessário */
+    font-size: 1.2em; /* Ajuste o tamanho da fonte conforme necessário */
+    cursor: pointer;
+
+}
+
+#contadorPlacar{
+    font-size: 20px;
+}
+
+.bola{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    position: absolute;
+}  
+
+.campoBola {
+    margin: 10px;
+    height: 750px;
+    width: 90%;
+    aspect-ratio: 1/1; /* Mantém uma proporção quadrada */
+    border: 10px;
+    background-color: aqua;
+    position: relative;
+}
+
+@media (max-width: 1500px) {
+    .campoBola {
+        margin: 10px;
+        height: 450px;
+        width: 90%;
+        aspect-ratio: 1/1; /* Mantém uma proporção quadrada */
+        border: 10px;
+        background-color: rgb(51, 245, 93);
+        position: relative;
+    }
+}
+
+@media (max-width: 768px) {
+    .campoBola {
+        margin: 10px;
+        height: 650px;
+        width: 90%;
+        aspect-ratio: 1/1; /* Mantém uma proporção quadrada */
+        border: 10px;
+        background-color: red;
+        position: relative;
+    }
+
+    .btnComecar {
+        margin-top: -10px;
+        display: flex;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .campoBola {
+        margin: 10px;
+        height: 550px;
+        width: 95%;
+        aspect-ratio: 1/1; /* Mantém uma proporção quadrada */
+        border: 10px;
+        background-color: gold;
+        position: relative;
+    }
+
+    .btnComecar {
+        margin-top: -10px;
+        display: flex;
+        text-align: center;
+    }
+}
